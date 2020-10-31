@@ -5,11 +5,12 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class GuestBook implements ActionListener {
 	
-	public void main(String[]args) {
+	public void run() {
 	
 	// Create a GUI with two buttons. One button reads "Add Name" and the other button reads "View Names". 
 	JFrame frame = new JFrame();
@@ -43,7 +44,10 @@ public class GuestBook implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		
+		if(arg0.getSource().equals("add")) {
+		String name = JOptionPane.showInputDialog(null,"Enter a name.");
+			
+		}
 	}
 
 }
